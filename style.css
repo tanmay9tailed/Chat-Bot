@@ -1,0 +1,268 @@
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(#210058, #000000);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.chatbot {
+    width: 420px;
+    height: 520px;
+    background-color: aliceblue;
+    border-radius: 10px 10px 0 10px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 80px;
+    right: 50px;
+    transform: scale(0.5);
+    opacity: 0;
+    transform-origin: bottom right;
+    transition:all 0.15s ;
+    pointer-events: none;
+    z-index: 9;
+}
+.toggler .chatbot{
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
+    /* z-index: 3; */
+}
+
+.chatbot header {
+    text-align: center;
+    background-color: #0062d5;
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 0;
+    position: relative;
+}
+.chatbot header span{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px;
+    visibility: hidden;
+}
+.chatbot .chatbox {
+    padding: 20px;
+    padding-right: 0;
+    position: relative;
+    overflow-y: auto;
+    max-height: calc(100% - 120px);
+}
+.chatbot .chatbox .chat p {
+    max-width: 80%; /* Set maximum width to 80% of chatbox width */
+    word-wrap: break-word; /* or overflow-wrap: break-word; */
+}
+.chatbot .chatbox li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.chatbot .chatbox .chat.incoming {
+    width: 85%;
+    position: relative;
+    left: -20px;
+    display: flex;
+}
+
+.chatbot .chatbox .chat.incoming span {
+    position: relative;
+    left: 20px;
+    bottom: 10px;
+    background-color: #210058;
+    color: white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.chatbot .chatbox .chat.incoming p {
+    background-color: #0062d5;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.chatbot .chatbox .chat.outgoing p {
+    background-color: #56a3fc;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.chatbot .chatbox .chat.outgoing {
+    max-width: 100%;
+    text-align: start; /* Align outgoing messages to the right */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chatbot .chatbox .chat.outgoing span {
+    position: relative;
+    right: 20px;
+    bottom: 10px;
+}
+
+.mypic {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+.chatbot .chat-input {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-top: 1px solid black;
+}
+
+.chatbot .chat-input textarea {
+    width: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none; 
+    font-size: 1.2rem;
+}
+
+.chatbot .chat-input span {
+    cursor: pointer;
+    font-size: 30px;
+    height: 100%;
+    visibility: hidden;
+}
+.toggler .chat-togglers span:nth-child(2){
+    transform: rotate(90deg);
+    opacity: 1;
+}
+.chat-togglers span:nth-child(2){
+    opacity: 0;
+}
+.chat-togglers span{
+    color: white;
+    position: absolute;
+    right: 30px;bottom: 10px;
+    background-color: #0062d5;
+    border-radius:50%;
+    padding: 15px;
+    font-size: 30px;
+    transition: all 0.2s;
+    cursor: pointer;
+    /* z-index: 2; */
+}
+nav{
+    color: #0062d5;
+    text-shadow:1px 2px 5px #0062d5;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+nav .navr span{
+margin-left: 20px;
+cursor: pointer;
+}
+.content{
+    padding: 25px;
+    width: 80%;
+    position: absolute;
+    bottom: 20%;
+    left: 7%;
+}
+.content h1{
+    color: #0077ff;
+    text-shadow:1px 2px 5px #0062d5;
+    font-weight: 400;
+    font-size: 7vh;
+    font-family: 'Material Symbols Outlined';
+    letter-spacing: -2px;
+    
+}
+.content p{
+    color: #0077ff;
+    text-shadow:1px 1px 1px #0062d5;
+    font-weight: 100;
+    font-family: monospace;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+.content .content-low{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+.content .content-low button{
+    background-color: #006ce8;
+    color: white;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    letter-spacing: 3px;
+    font-size: 17px;
+    font-family: monospace;
+    box-shadow:5px 5px 15px #288cff,-5px -0cqb 15px #278cff;
+    cursor: pointer;
+}
+@media(max-width:490px){
+    .chatbot{
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .chatbot header{
+        padding: 15px 0;
+    }
+    .chatbot header span{
+        visibility: visible;
+        cursor: pointer;
+    }
+    nav .navr span{
+        margin-left:5px ;
+    }
+    .content{
+        padding: 0;
+        /* width: 100%; */
+    }
+    .content p{
+        font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 14px
+    }
+    .content .content-low{
+        width: 110%;
+    }
+    .content .content-low button{
+        padding: 8px 40px;
+    }
+    .content h2{
+        font-size: 20px;
+    }
+}
