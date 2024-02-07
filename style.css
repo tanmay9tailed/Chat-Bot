@@ -246,6 +246,7 @@ cursor: pointer;
     }
     nav .navr span{
         margin-left:5px ;
+            font-size: 10px;
     }
     .content{
         padding: 0;
